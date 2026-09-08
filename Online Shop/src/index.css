@@ -1,0 +1,383 @@
+:root {
+  --alabaster-gleam: #f0debd;
+  --plum-wine: #674550;
+  --olive-drab: #756d47;
+  --paper: #fcf8ed;
+  --paper-deep: #f4ead3;
+  --ink: #342c2a;
+  --muted-ink: #766a5a;
+  --line: rgba(103, 69, 80, 0.27);
+  --shadow: 0 18px 40px rgba(69, 48, 42, 0.12);
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: 'Trebuchet MS', 'Segoe UI', sans-serif;
+
+  color: var(--ink);
+  background: var(--alabaster-gleam);
+  font-family: var(--serif);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(117, 109, 71, 0.15), transparent 23rem),
+    radial-gradient(circle at 87% 20%, rgba(103, 69, 80, 0.1), transparent 25rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.24) 25%, transparent 25%) 0 0 / 8px 8px,
+    var(--alabaster-gleam);
+}
+
+button {
+  font: inherit;
+}
+
+#root {
+  width: min(1180px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 0 auto;
+  border-inline: 1px solid var(--line);
+  background: rgba(252, 248, 237, 0.92);
+  box-shadow: var(--shadow);
+}
+
+#root > div {
+  position: relative;
+  padding: 52px clamp(18px, 4vw, 62px) 70px;
+  overflow: hidden;
+}
+
+#root > div::before,
+#root > div::after {
+  position: absolute;
+  left: 50%;
+  width: min(760px, 76%);
+  height: 1px;
+  content: '';
+  transform: translateX(-50%);
+  background: var(--line);
+}
+
+#root > div::before {
+  top: 27px;
+  box-shadow: 0 5px 0 rgba(117, 109, 71, 0.18);
+}
+
+#root > div::after {
+  bottom: 27px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+#root > div > h1:first-child {
+  position: relative;
+  margin: 0 auto 48px;
+  color: var(--plum-wine);
+  font-size: clamp(2.35rem, 6vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#root > div > h1:first-child::before {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--olive-drab);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  content: '✦  Botanical house  ✦';
+}
+
+#root > div > h1:first-child::after {
+  display: block;
+  width: 76px;
+  height: 7px;
+  margin: 20px auto 0;
+  border-top: 1px solid var(--olive-drab);
+  border-bottom: 1px solid var(--olive-drab);
+  content: '';
+}
+
+#root > div > div:first-of-type {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  gap: 22px;
+}
+
+#root > div > div:first-of-type > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 247, 0.74);
+  box-shadow: 0 8px 18px rgba(69, 48, 42, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+#root > div > div:first-of-type > div::before {
+  position: absolute;
+  z-index: 1;
+  inset: 8px;
+  border: 1px solid rgba(255, 253, 247, 0.65);
+  pointer-events: none;
+  content: '';
+}
+
+#root > div > div:first-of-type > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 26px rgba(69, 48, 42, 0.15);
+}
+
+#root > div > div:first-of-type img {
+  display: block;
+  width: 100%;
+  height: 235px;
+  border-bottom: 4px solid var(--olive-drab);
+  background: var(--paper-deep);
+  object-fit: cover;
+}
+
+#root > div > div:first-of-type h2 {
+  min-height: 54px;
+  padding: 18px 17px 6px;
+  color: var(--plum-wine);
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+#root > div > div:first-of-type p {
+  padding: 0 17px 17px;
+  color: var(--olive-drab);
+  font-family: var(--sans);
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+#root > div > div:first-of-type button {
+  margin: auto 14px 14px;
+  padding: 11px 12px;
+  border: 1px solid var(--plum-wine);
+  border-radius: 0;
+  color: var(--paper);
+  background: var(--plum-wine);
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+#root > div > div:first-of-type button:hover,
+#root > div > div:first-of-type button:focus-visible {
+  border-color: var(--olive-drab);
+  color: var(--paper);
+  background: var(--olive-drab);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(117, 109, 71, 0.42);
+  outline-offset: 3px;
+}
+
+#root > div > div:last-of-type {
+  margin-top: 62px;
+  padding-top: 34px;
+  border-top: 3px double var(--line);
+}
+
+#root > div > div:last-of-type > h1 {
+  color: var(--plum-wine);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#root > div > div:last-of-type > h2 {
+  width: fit-content;
+  margin: 12px auto 27px;
+  padding: 8px 18px;
+  border: 1px solid rgba(117, 109, 71, 0.48);
+  color: var(--paper);
+  background: var(--olive-drab);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#root > div > div:last-of-type > div {
+  display: grid;
+  grid-template-columns: 100px minmax(130px, 1fr) auto auto repeat(3, 34px);
+  align-items: center;
+  gap: 18px;
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 247, 0.62);
+}
+
+#root > div > div:last-of-type > div img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 3px solid var(--paper-deep);
+  object-fit: cover;
+}
+
+#root > div > div:last-of-type > div h2 {
+  color: var(--plum-wine);
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+#root > div > div:last-of-type > div p {
+  color: var(--muted-ink);
+  font-family: var(--sans);
+  font-size: 0.83rem;
+}
+
+#root > div > div:last-of-type > div button {
+  min-width: 34px;
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--plum-wine);
+  background: var(--paper);
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 700;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+#root > div > div:last-of-type > div button:nth-of-type(1) {
+  grid-column: 5;
+}
+
+#root > div > div:last-of-type > div button:nth-of-type(2) {
+  grid-column: 6;
+}
+
+#root > div > div:last-of-type > div button:nth-of-type(3) {
+  grid-column: 7;
+}
+
+#root > div > div:last-of-type > div button:hover,
+#root > div > div:last-of-type > div button:focus-visible {
+  color: var(--paper);
+  background: var(--plum-wine);
+}
+
+@media (max-width: 680px) {
+  #root {
+    width: 100%;
+    border-inline: 0;
+  }
+
+  #root > div {
+    padding: 42px 16px 55px;
+  }
+
+  #root > div > div:first-of-type {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  #root > div > div:first-of-type img {
+    height: 170px;
+  }
+
+  #root > div > div:first-of-type h2 {
+    min-height: 72px;
+    padding: 13px 12px 5px;
+    font-size: 0.95rem;
+  }
+
+  #root > div > div:first-of-type p {
+    padding: 0 12px 12px;
+  }
+
+  #root > div > div:first-of-type button {
+    margin: auto 10px 10px;
+    padding: 10px 6px;
+    font-size: 0.67rem;
+  }
+
+  #root > div > div:last-of-type > div {
+    grid-template-columns: 66px minmax(0, 1fr) repeat(3, 29px);
+    gap: 10px;
+  }
+
+  #root > div > div:last-of-type > div img {
+    width: 66px;
+    height: 66px;
+  }
+
+  #root > div > div:last-of-type > div h2 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 0.9rem;
+  }
+
+  #root > div > div:last-of-type > div p:first-of-type {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  #root > div > div:last-of-type > div p:last-of-type {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  #root > div > div:last-of-type > div button:nth-of-type(1) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  #root > div > div:last-of-type > div button:nth-of-type(2) {
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  #root > div > div:last-of-type > div button:nth-of-type(3) {
+    grid-column: 5;
+    grid-row: 1;
+  }
+
+  #root > div > div:last-of-type > div button {
+    min-width: 29px;
+    min-height: 29px;
+  }
+}
+
+@media (max-width: 390px) {
+  #root > div > div:first-of-type {
+    grid-template-columns: 1fr;
+  }
+
+  #root > div > div:first-of-type img {
+    height: 220px;
+  }
+}
