@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice",
+      "surname": "Johnson",
+      "gender": "female",
+      "salary": 3500
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "surname": "Smith",
+      "gender": "male",
+      "salary": 4200
+    },
+    {
+      "id": "3",
+      "name": "Charlie",
+      "surname": "Brown",
+      "gender": "male",
+      "salary": 3900
+    },
+    {
+      "id": "4",
+      "name": "Diana",
+      "surname": "Wilson",
+      "gender": "female",
+      "salary": 4600
+    },
+    {
+      "id": "5",
+      "name": "Ethan",
+      "surname": "Davis",
+      "gender": "male",
+      "salary": 5100
+    },
+    {
+      "id": "6",
+      "name": "Fiona",
+      "surname": "Miller",
+      "gender": "female",
+      "salary": 4400
+    },
+    {
+      "id": "7",
+      "name": "George",
+      "surname": "Moore",
+      "gender": "male",
+      "salary": 4800
+    },
+    {
+      "id": "8",
+      "name": "Hannah",
+      "surname": "Taylor",
+      "gender": "female",
+      "salary": 5300
+    },
+    {
+      "id": "9",
+      "name": "Isaac",
+      "surname": "Anderson",
+      "gender": "male",
+      "salary": 5700
+    },
+    {
+      "id": "10",
+      "name": "Julia",
+      "surname": "Thomas",
+      "gender": "female",
+      "salary": 6100
+    },
+    {
+      "name": "Mary",
+      "surname": "Johnson",
+      "gender": "male",
+      "salary": "450000",
+      "id": "NF6arkOSDRc"
+    },
+    {
+      "name": "Samantha",
+      "surname": "Lewes",
+      "gender": "female",
+      "salary": "85550",
+      "id": "p1SD4cNjrK0"
+    },
+    {
+      "name": "Hellen",
+      "surname": "Lewes",
+      "gender": "female",
+      "salary": "450000",
+      "id": "Ctb8k33Kn48"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
